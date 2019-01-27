@@ -51,11 +51,134 @@ body {
 
 .content {
   display: grid;
-  grid-template-columns: 91px 1fr;
-  grid-template-rows: 100vh;
+  grid-template-columns: minmax(75px, 8.5%) 1fr;
+  /* grid-template-rows: 100vh; */
 }
 
 .sidebar {
   background-color: #FC6B68;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+  color: white;
+  padding: 15px 0;
+}
+
+.sidebar p {
+  margin: 5px 0 20px 0;
+}
+
+.fonts {
+  display: flex;
+  flex-direction: column;
+}
+
+.fa-home {
+  font-size: 27px;
+}
+
+.fa-heart {
+  font-size: 27px;
+}
+
+.fa-fire {
+  font-size: 27px;
+}
+
+.fa-cog {
+  font-size: 27px;
+}
+
+.movies {
+  padding: 20px 20px 20px 25px;
+}
+
+.contentgrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 25px;
+}
+
+.post-image {
+  margin: 0;
+  position: relative;
+}
+
+.post-image img {
+  width: 100%;
+}
+
+.post-overlay {
+  background: rgba(253,97,98, .8);
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  text-align: center;
+  height: 50%;
+  text-align: justify;
+  padding: 7px;
+}
+
+.post-overlay h4 {
+  margin: 8px 0;
+  font-size: 21px;
+}
+
+.post-overlay span {
+  font-size: 12px;
+  line-height: 2px;
+}
+
+.aclamadas {
+  margin-top: 40px;
+}
+
+
+@media screen and (max-width: 1140px) {
+  .contentgrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media screen and (max-width: 785px) {
+  .post-overlay span {
+    font-size: 10px;
+  }
+
+  .post-overlay h4 {
+    font-size: 18px;
+    margin: 4px 0;
+  }
+}
+
+@media screen and (max-width: 681px) {
+  .contentgrid {
+    grid-template-columns: 1fr;
+  }
+
+  .post-overlay span {
+    font-size: 14px;
+  }
+
+  .post-overlay h4 {
+    font-size: 24px;
+    margin: 9px 0;
+  }
+}
+
+@media screen and (max-width: 481px) {
+  .post-overlay span {
+    font-size: 10px;
+  }
+
+  .post-overlay h4 {
+    font-size: 18px;
+    margin: 4px 0;
   }
 }
